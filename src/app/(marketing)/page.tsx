@@ -8,10 +8,18 @@ import { TestimonialsSection } from "../../../components/sections/TestimonialsSe
 import { FAQSection } from "../../../components/sections/FAQSection";
 import { ContactSection } from "../../../components/sections/ContactSection";
 import { FloatingWhatsApp } from "../../../components/ui/FloatingWhatsApp";
+import { PromoPopup } from "../../../components/ui/PromoPopup";
+import { Navbar } from "../../../components/sections/Navigation";
+import { Footer } from "../../../components/sections/Footer";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
+      <Navbar />
+      
+      {/* Promo popup: appears 5s after page load */}
+      <PromoPopup />
+
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
@@ -21,6 +29,8 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
+
+      <Footer />
 
       <FloatingWhatsApp />
     </main>
