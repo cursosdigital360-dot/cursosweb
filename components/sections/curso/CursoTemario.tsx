@@ -1,131 +1,110 @@
+"use client";
+
+import { SectionTitle } from "../../ui/SectionTitle";
+
 export function CursoTemario() {
   const temas = [
     {
-      icon: "🖥️",
-      category: "Planificación Digital",
+      // Ícono de software/planificación (Vector elegante en lugar de emoji)
+      icon: (
+        <svg className="w-6 h-6 text-[#B58D53]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      category: "Planificación en Exoplan",
       items: [
-        "Planificación en Exoplan",
-        "Análisis del caso",
+        "Análisis clínico y radiográfico del caso",
         "Posicionamiento ideal del implante",
-        "Uso estratégico de software",
+        "Uso estratégico de herramientas del software",
       ],
     },
     {
-      icon: "🦷",
+      // Ícono de precisión/diseño
+      icon: (
+        <svg className="w-6 h-6 text-[#B58D53]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2-1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+        </svg>
+      ),
       category: "Diseño de Guías Quirúrgicas",
       items: [
-        "Principios clave de diseño",
-        "Ajuste, estabilidad y precisión",
-        "Errores comunes y cómo evitarlos",
-        "Diseño de guías quirúrgicas",
+        "Principios clave de diseño estructural",
+        "Ajuste, estabilidad y precisión en boca",
+        "Errores comunes y protocolos para evitarlos",
       ],
     },
     {
-      icon: "🖨️",
-      category: "Impresión 3D",
+      // Ícono de manufactura/impresión
+      icon: (
+        <svg className="w-6 h-6 text-[#B58D53]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      category: "Manufactura e Impresión 3D",
       items: [
-        "Preparación de archivos",
-        "Materiales recomendados",
-        "Flujo de trabajo práctico",
-        "Control de calidad en impresión",
+        "Preparación técnica de archivos STL",
+        "Materiales recomendados y parámetros",
+        "Flujo de trabajo práctico y posprocesado",
       ],
     },
   ];
 
   return (
-    <section
-      id="temario"
-      className="py-24 bg-[#0a0a0a] relative overflow-hidden"
-    >
-      {/* Background decorative */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-amber-900/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-amber-900/5 blur-[80px] pointer-events-none" />
+    // CAMBIO: Fondo Azul Carbono profundo (#141C21)
+    <section id="temario" className="py-24 bg-[#141C21] relative overflow-hidden">
+      
+      {/* Background decorative (Glow dorado sutil) */}
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-[#B58D53]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#2A3B47]/30 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <p className="text-amber-400 text-sm font-bold uppercase tracking-[0.3em] mb-3">
-            Programa del Curso
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
-            ¿Qué{" "}
-            <span
-              className="text-transparent bg-clip-text"
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #D4AF37 0%, #F5E27A 100%)",
-              }}
-            >
-              aprenderás?
-            </span>
-          </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Un temario diseñado para llevarte de la teoría directamente a la
-            ejecución clínica en dos días intensivos.
-          </p>
-        </div>
+        
+        {/* Section header usando nuestro componente base */}
+        <SectionTitle 
+          accent="Programa del Curso"
+          title="¿Qué aprenderás?"
+          subtitle="Un temario estructurado para llevarte de la teoría directamente a la ejecución clínica en dos días intensivos."
+          centered
+          className="[&>h2]:text-white"
+        />
 
         {/* Tema cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {temas.map((tema, index) => (
             <div
               key={index}
-              className="group relative rounded-3xl border border-white/5 bg-gradient-to-br from-[#141414] to-[#0f0f0f] p-7 hover:border-amber-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-900/20 hover:-translate-y-1"
+              className="group relative rounded-3xl border border-[#2A3B47] bg-[#1A242B] p-8 hover:border-[#B58D53]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-black/50 hover:-translate-y-1 flex flex-col"
             >
-              {/* Glow on hover */}
-              <div className="absolute inset-0 rounded-3xl bg-amber-500/0 group-hover:bg-amber-500/5 transition-colors duration-500" />
+              {/* Glow interno on hover */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-[#B58D53]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Number badge */}
-              <div className="flex items-center gap-4 mb-6">
-                <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05))",
-                    border: "1px solid rgba(212,175,55,0.3)",
-                  }}
-                >
+              {/* Number badge & Icon */}
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-[#2A3B47]/50 border border-[#B58D53]/20 shadow-inner group-hover:bg-[#B58D53]/10 transition-colors">
                   {tema.icon}
                 </div>
                 <div>
-                  <p className="text-amber-400 text-xs font-bold uppercase tracking-wider">
-                    Módulo {index + 1}
+                  <p className="text-[#B58D53] text-xs font-bold uppercase tracking-widest mb-1">
+                    Módulo 0{index + 1}
                   </p>
-                  <h3 className="text-white font-bold text-lg leading-tight">
+                  <h3 className="text-[#F9F9F9] font-bold text-lg leading-tight tracking-wide">
                     {tema.category}
                   </h3>
                 </div>
               </div>
 
               {/* Divider */}
-              <div
-                className="h-px mb-6 opacity-20"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(90deg, transparent, #D4AF37, transparent)",
-                }}
-              />
+              <div className="h-px mb-6 opacity-20 bg-gradient-to-r from-transparent via-[#B58D53] to-transparent w-full" />
 
               {/* Items list */}
-              <ul className="relative z-10 space-y-3">
+              <ul className="relative z-10 space-y-4 flex-1">
                 {tema.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <div className="w-5 h-5 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-2.5 h-2.5 text-amber-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
+                  <li key={i} className="flex items-start gap-3 text-gray-400 group-hover:text-gray-300 transition-colors">
+                    <div className="w-5 h-5 rounded-full bg-[#2A3B47] border border-[#B58D53]/30 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-inner">
+                      <svg className="w-3 h-3 text-[#B58D53]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-sm leading-relaxed">{item}</span>
+                    <span className="text-sm font-light leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -133,30 +112,19 @@ export function CursoTemario() {
           ))}
         </div>
 
-        {/* Full-width bottom stat bar */}
-        <div
-          className="rounded-2xl p-px"
-          style={{
-            backgroundImage: "linear-gradient(135deg, #D4AF37, #B8860B)",
-          }}
-        >
-          <div className="rounded-2xl bg-[#0f0f0f] grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+        {/* Full-width bottom stat bar (Estilo Dashboard B2B) */}
+        <div className="rounded-2xl border border-[#B58D53]/20 bg-[#1A242B] overflow-hidden shadow-xl shadow-black/40">
+          <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#2A3B47]">
             {[
               { label: "Horas de formación", value: "16 hrs" },
-              { label: "Modalidad", value: "100% Presencial" },
-              { label: "Práctica con casos reales", value: "Incluida" },
+              { label: "Modalidad", value: "Presencial" },
+              { label: "Práctica Clínica", value: "Casos Reales" },
             ].map((stat, i) => (
-              <div key={i} className="px-8 py-6 text-center">
-                <p
-                  className="text-2xl font-black text-transparent bg-clip-text mb-1"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(135deg, #D4AF37, #F5E27A)",
-                  }}
-                >
+              <div key={i} className="px-8 py-8 text-center hover:bg-[#2A3B47]/10 transition-colors">
+                <p className="text-2xl md:text-3xl font-black text-[#B58D53] mb-2 tracking-tight">
                   {stat.value}
                 </p>
-                <p className="text-slate-400 text-sm">{stat.label}</p>
+                <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>

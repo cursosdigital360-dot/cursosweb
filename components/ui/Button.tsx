@@ -8,19 +8,30 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", ...props }, ref) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:pointer-events-none disabled:opacity-50";
     
+    // Base: Transiciones suaves, efecto de hundimiento al hacer click (active:scale-95) y enfoque accesible dorado
+    const baseStyles = "inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58D53] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95";
+    
+    // Variantes inyectadas con la paleta de Odontología Digital 360
     const variants = {
-      primary: "bg-brand-900 text-white hover:bg-brand-950 shadow-sm",
-      secondary: "bg-brand-500 text-white hover:bg-brand-600 shadow-sm",
-      outline: "border-2 border-brand-900 text-brand-900 hover:bg-brand-50",
-      ghost: "text-brand-900 hover:bg-brand-50",
+      // Primary (El que Vende): Dorado Bronce con sombra luminosa
+      primary: "bg-[#B58D53] text-white hover:bg-[#9A7642] shadow-lg shadow-[#B58D53]/20 hover:-translate-y-0.5",
+      
+      // Secondary (Autoridad): Azul Carbono sólido
+      secondary: "bg-[#2A3B47] text-white hover:bg-[#1A242B] shadow-md shadow-black/10 hover:-translate-y-0.5",
+      
+      // Outline: Borde elegante oscuro (Ideal sobre fondos claros)
+      outline: "border-2 border-[#2A3B47] text-[#2A3B47] hover:bg-[#2A3B47] hover:text-white",
+      
+      // Ghost: Transparente que se pinta sutilmente al pasar el mouse
+      ghost: "text-[#2A3B47] hover:bg-[#2A3B47]/5 hover:text-[#B58D53]",
     };
 
+    // Tamaños ajustados para que se sientan como botones de App móvil/Desktop premium
     const sizes = {
-      sm: "h-9 px-4 text-sm",
-      md: "h-11 px-8 text-base",
-      lg: "h-14 px-10 text-lg",
+      sm: "h-10 px-5 text-sm",
+      md: "h-12 px-6 text-base",
+      lg: "h-14 px-8 text-lg",
     };
 
     return (
@@ -32,4 +43,5 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
 Button.displayName = "Button";

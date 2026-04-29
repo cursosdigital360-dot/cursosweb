@@ -1,146 +1,165 @@
 export const siteConfig = {
   name: "Odontología Digital 360",
   slogan: "Tecnología, conocimiento y resultados reales.",
-  description: "La plataforma en México que lleva al odontólogo de la teoría a la ejecución del flujo digital con acompañamiento, casos reales y enfoque de implementación clínica.",
+  description: "La plataforma líder en México diseñada para llevar al odontólogo de la teoría a la ejecución absoluta del flujo digital. No somos un curso, somos tu equipo de implementación clínica.",
+  
+  // DATOS DE CONTACTO ACTUALIZADOS
   contact: {
-    whatsapp: "+52 311 376 1284",
-    whatsappUrl: "https://wa.me/523113761284?text=Hola,%20quiero%20información%20sobre%20Odontología%20Digital%20360%20y%20cómo%20implementar%20flujo%20digital%20en%20mi%20clínica.",
+    whatsapp: "+52 55 2089 4849",
+    whatsappUrl: "https://wa.me/525520894849?text=Hola%20Alan,%20vengo%20de%20la%20web%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20implementar%20flujo%20digital%20en%20mi%20cl%C3%ADnica.",
     message: "Hola, quiero información sobre Odontología Digital 360 y cómo implementar flujo digital en mi clínica.",
     address: "Calle Juan Escutia 168 A, Centro, 63000 Tepic, Nayarit",
     schedule: "Lunes a viernes de 10 am a 8 pm",
   },
+
+  // SEO & ESTRATEGIA DIGITAL
   seo: {
-    title: "Odontología Digital 360 | Flujo Digital para Odontólogos",
-    description: "Aprende, implementa y transforma tu clínica con una plataforma integral que combina formación, tecnología y acompañamiento real.",
-    keywords: ["flujo digital odontología", "curso flujo digital odontología", "cómo implementar flujo digital en mi clínica", "mejor curso odontología digital México", "curso exocad para odontólogos", "implantología digital curso", "odontología digital casos reales México"],
+    title: "Odontología Digital 360 | Implementación de Flujo Digital en México",
+    description: "Deja de tomar cursos teóricos. Implementa escaneo intraoral, diseño CAD e impresión 3D con acompañamiento clínico real y retorno de inversión garantizado.",
+    keywords: [
+      "flujo digital odontología", 
+      "implementación clínica digital", 
+      "curso exocad méxico", 
+      "odontología digital tepic", 
+      "consultoría para dentistas", 
+      "escaneo intraoral capacitación", 
+      "implantología digital avanzada",
+      "diseño de guías quirúrgicas"
+    ],
   },
+
+  // HERO (Impacto Cinemático)
   hero: {
-    headline: "De la teoría a la ejecución del flujo digital odontológico",
-    subheadline: "Aprende, implementa y transforma tu clínica con una plataforma integral que combina formación, tecnología y acompañamiento real.",
-    ctaPrimary: "Solicitar información por WhatsApp",
-    ctaSecondary: "Ver cómo funciona",
+    headline: "TECNOLOGÍA. CONOCIMIENTO. RESULTADOS.",
+    subheadline: "La mayoría se estanca con equipos costosos y nula claridad. Aquí transformas tu forma de trabajar, optimizas procesos y elevas el nivel de tus tratamientos hoy mismo.",
+    ctaPrimary: "Solicitar Diagnóstico",
+    ctaSecondary: "Ver Metodología",
   },
+
+  // EL PROBLEMA (Pattern Interrupt)
   problem: {
     title: "¿Cansado de cursos que no puedes aplicar en tu clínica?",
     items: [
       {
-        title: "Cursos aislados",
-        description: "Mucha teoría dispersa que no te dice por dónde empezar ni cómo conectar los procesos."
+        title: "Teoría sin ejecución",
+        description: "Mucho contenido disperso que no te enseña a conectar los procesos reales en tu sillón dental."
       },
       {
-        title: "Tecnología costosa",
-        description: "Miedo a invertir miles de dólares en equipos sin saber si realmente los vas a usar."
+        title: "Inversiones a ciegas",
+        description: "Miedo a gastar miles de dólares en escáneres o impresoras que terminarán guardadas por falta de uso."
       },
       {
-        title: "Falta de ejecución",
-        description: "Tomar múltiples diplomados para terminar haciendo odontología análoga por falta de dirección."
+        title: "Dependencia externa",
+        description: "Seguir atado a tiempos y costos de laboratorios externos por no dominar el flujo digital in-house."
       }
     ]
   },
+
+  // LA SOLUCIÓN (Propuesta de Valor)
   solution: {
-    title: "No es un curso más. Es una plataforma de implementación.",
-    description: "Cerramos la brecha entre la teoría y la práctica clínica. Te damos todo lo necesario para ejecutar el flujo digital con confianza.",
+    title: "No es un curso más. Es tu plataforma de implementación.",
+    description: "Cerramos la brecha entre la teoría y la práctica clínica. Te entregamos el mapa exacto y el acompañamiento para que ejecutes con absoluta certeza.",
     features: [
-      "Aprendizaje teórico-práctico",
-      "Guía de selección tecnológica",
-      "Ruta de implementación paso a paso",
-      "Acompañamiento clínico",
-      "Análisis de casos reales"
+      "Aprendizaje práctico sobre casos reales",
+      "Auditoría y selección tecnológica inteligente",
+      "Setup de software y hardware a medida",
+      "Acompañamiento clínico hombro a hombro",
+      "Optimización de rentabilidad digital"
     ]
   },
+
+  // EL PROCESO (El Circuito Digital)
   process: {
-    title: "Cómo funciona el sistema",
+    title: "Tu ruta hacia la transformación",
     steps: [
       {
         step: "01",
-        name: "Diagnóstico",
-        description: "Analizamos el estado actual de tu clínica y las posibilidades reales de digitalización."
+        name: "Diagnóstico 360",
+        description: "Analizamos tu clínica, tus metas y tu presupuesto para diseñar tu ruta de digitalización personalizada."
       },
       {
         step: "02",
-        name: "Formación",
-        description: "Aprende los fundamentos clínicos y el uso preciso del software necesario para tu especialidad."
+        name: "Dominio de Software",
+        description: "Capacitación intensiva en el manejo preciso de archivos, escaneo y diseño CAD aplicado a tu especialidad."
       },
       {
         step: "03",
-        name: "Selección tecnológica",
-        description: "Te guiamos para invertir exactamente en el equipo que tu clínica requiere para tener un retorno de inversión real."
+        name: "Curaduría Tecnológica",
+        description: "Te guiamos en la compra de los equipos correctos. Inversión inteligente, sin desperdicio de capital."
       },
       {
         step: "04",
-        name: "Implementación clínica",
-        description: "Lleva lo aprendido al paciente. Acompañamiento en el paso a paso dentro de tu propio entorno clínico."
+        name: "Ejecución Clínica",
+        description: "Llevamos lo aprendido al paciente real. Te acompañamos en el paso a paso dentro de tu propio entorno."
       },
       {
         step: "05",
-        name: "Acompañamiento",
-        description: "No estás solo. Resuelve dudas y perfecciona tu técnica con nuestros expertos y casos reales."
+        name: "Soporte de Éxito",
+        description: "Resolución de dudas en tiempo real y perfeccionamiento continuo con nuestra comunidad de expertos."
       }
     ]
   },
+
+  // PROGRAMAS (La Bóveda VIP)
   programs: {
-    title: "Programas de Implementación",
+    title: "Programas de Alta Especialidad",
     items: [
       {
-        name: "Programa Integral de Transformación Clínica",
-        description: "Nuestra solución flagship. Domina todo el flujo y transforma por completo tu práctica clínica de principio a fin.",
-        label: "Más elegido",
-        features: ["Mentoria 1 a 1", "Acceso a todo el ecosistema", "Soporte clínico prioritario"]
+        name: "Programa Integral de Transformación",
+        description: "Nuestra solución flagship. Domina todo el ecosistema y transforma por completo tu práctica clínica de principio a fin.",
+        label: "Más Elegido",
+        features: ["Mentoría 1 a 1", "Acceso total al ecosistema", "Soporte clínico prioritario"]
       },
       {
-        name: "Curso de Flujo Digital",
-        description: "Los cimientos esenciales para entrar de lleno y sin miedo a la odontología moderna.",
-        features: ["Procesos de escaneo", "Formatos digitales", "Integración clínica"]
+        name: "Diplomado en Flujo Digital",
+        description: "Los cimientos esenciales para entrar de lleno y con autoridad a la odontología moderna.",
+        features: ["Procesos de escaneo", "Manejo de formatos", "Integración clínica"]
       },
       {
         name: "Implantología Digital",
-        description: "Planeación precisa, guías quirúrgicas y predictibilidad absoluta en cada implante.",
-        features: ["Planeación quirúrgica", "Impresión 3D de guías", "Resolución de complicaciones"]
+        description: "Planeación precisa, diseño de guías quirúrgicas e impresión 3D para una predictibilidad absoluta.",
+        features: ["Planeación avanzada", "Diseño de guías", "Resolución de complicaciones"]
       },
       {
-        name: "Exocad / Diseño Digital",
-        description: "Contrala el software líder del mercado para no depender de laboratorios externos.",
-        features: ["Coronas y puentes", "Diseño de sonrisa", "Flujo Chairside"]
+        name: "Exocad Professional",
+        description: "Domina el software líder para no depender de terceros y controlar la calidad de tus restauraciones.",
+        features: ["Diseño de sonrisa", "Coronas y puentes", "Flujo Chairside"]
       }
     ]
   },
+
+  // BENEFICIOS (El Ecosistema)
   benefits: {
     title: "Menos teoría. Más resultados.",
     items: [
-      "Plataforma Integral",
-      "Enfoque Práctico",
-      "Implementación Clínica",
-      "Acceso y Guía sobre Tecnología",
-      "Acompañamiento Real",
-      "Certeza en tu Inversión"
+      "Plataforma B2B Integral",
+      "Enfoque 100% Ejecutable",
+      "Acompañamiento en Casos Reales",
+      "Ahorro Garantizado en Tecnología",
+      "Red de Proveedores Verificados",
+      "Certeza en Retorno de Inversión"
     ]
   },
+
+  // FAQ (Cierre de Dudas)
   faq: {
     title: "Preguntas Frecuentes",
     items: [
       {
-        question: "¿Cuánto cuesta la formación?",
-        answer: "El costo depende del programa y el nivel de profundidad que requieras. Contáctanos para hacerte un diagnóstico gratuito y darte la mejor opción."
+        question: "¿Para quién es este programa?",
+        answer: "Para odontólogos que quieren dejar de ser espectadores y desean implementar tecnología real para facturar más y trabajar con mayor precisión."
       },
       {
-        question: "¿Cuánto dura el programa?",
-        answer: "Tenemos formatos intensivos y programas de acompañamiento continuo. Dependiendo de tu disponibilidad, trazaremos la mejor ruta."
+        question: "¿Tengo que comprar un escáner ahora?",
+        answer: "Absolutamente no. Parte de nuestro valor es evitar que compres equipo que no necesitas. Nosotros te enseñamos a elegir según tu realidad clínica."
       },
       {
-        question: "¿Necesito equipo propio para empezar?",
-        answer: "No. Puedes iniciar tu formación para entender cómo funciona la tecnología antes de hacer cualquier inversión física. Nosotros te guiamos para una compra inteligente."
+        question: "¿Qué pasa si nunca he usado software CAD?",
+        answer: "El sistema está diseñado para llevarte de cero a experto en semanas. Nuestra curva de aprendizaje es 3 veces más rápida que un diplomado tradicional."
       },
       {
-        question: "¿Sirve si empiezo desde cero en tecnología?",
-        answer: "Totalmente. El programa está diseñado para llevarte de la odontología tradicional a un flujo 100% digital sin frustraciones."
-      },
-      {
-        question: "¿Qué software aprenderé a utilizar?",
-        answer: "Nos enfocamos en el uso práctico del software líder de la industria como Exocad, software de planeación de implantes y manejo de archivos en formatos abiertos."
-      },
-      {
-        question: "¿Hay acompañamiento en mis propios casos?",
-        answer: "Sí, uno de nuestros grandes pilares es no dejarte solo y apoyarte para llevar al éxito tus primeros casos clínicos implementando flujo digital."
+        question: "¿El acompañamiento es en mi clínica?",
+        answer: "Contamos con sesiones presenciales y mentorías híbridas que aseguran que el conocimiento se aplique directamente en tus pacientes de consulta diaria."
       }
     ]
   }
