@@ -1,4 +1,5 @@
 import { HeroSection } from "../../../components/sections/HeroSection";
+import { EventsSection } from "../../../components/sections/EventsSection"; // <-- La subimos
 import { ProblemSection } from "../../../components/sections/ProblemSection";
 import { SolutionSection } from "../../../components/sections/SolutionSection";
 import { ProcessSection } from "../../../components/sections/ProcessSection";
@@ -17,14 +18,19 @@ export default function Home() {
     <main className="flex flex-col min-h-screen">
       <Navbar />
       
-      {/* Promo popup: appears 5s after page load */}
+      {/* Promo popup: aparece 5s después de la carga */}
       <PromoPopup />
 
       <HeroSection />
+
+      {/* --- CARTELERA DE EVENTOS DEBAJO DEL HERO --- */}
+      <EventsSection />
+
       <ProblemSection />
       <SolutionSection />
       <ProcessSection />
       <ProgramsSection />
+      
       <BenefitsSection />
       <TestimonialsSection />
       <FAQSection />
