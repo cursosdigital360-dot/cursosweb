@@ -1,5 +1,4 @@
 import { Container } from "../ui/Container";
-// Ajusta SectionTitle si tiene estilos fijos, o ignóralo si acepta heredar color
 import { SectionTitle } from "../ui/SectionTitle"; 
 import { Button } from "../ui/Button";
 import { siteConfig } from "../../content/site.config";
@@ -8,25 +7,25 @@ import Link from "next/link";
 export function ProgramsSection() {
   const { programs, contact } = siteConfig;
 
-  // Fallbacks estratégicos B2B para Odontología Digital 360
+  // Fallbacks estratégicos B2B para Odontología Digital 360 (Ajustados a Curso y Diplomado)
   const defaultPrograms = [
     {
-      name: "Mentoría 1:1 de Implementación",
-      description: "Consultoría privada para auditar tu clínica y armar tu lista de compras exacta de hardware y software sin desperdiciar dinero.",
+      name: "Curso de Flujo Digital",
+      description: "Aprende los fundamentos clínicos y el manejo de software para entrar de lleno y sin miedo a la odontología moderna.",
       features: [
-        "Auditoría de equipos actuales",
-        "Ruta de compras optimizada",
-        "Setup de software a distancia",
-        "Soporte por 30 días"
+        "Fundamentos de escaneo intraoral",
+        "Manejo de formatos digitales (STL, PLY)",
+        "Selección tecnológica inteligente",
+        "Integración clínica inicial"
       ]
     },
     {
       name: "Diplomado en Flujo Digital 360",
-      description: "El programa más completo. Aprende escaneo, diseño CAD e impresión 3D trabajando directamente sobre casos reales.",
+      description: "El programa más completo. Aprende escaneo, diseño CAD e impresión 3D trabajando directamente sobre casos reales de tu clínica.",
       label: "Programa Estrella",
       features: [
         "Capacitación 100% práctica",
-        "Módulos de escaneo intraoral",
+        "Módulos avanzados de diseño CAD",
         "Diseño de guías y provisionales",
         "Acompañamiento en tu primer caso clínico"
       ]
@@ -50,12 +49,13 @@ export function ProgramsSection() {
              {programs?.title || "Nuestros Programas"}
           </h2>
           <p className="text-lg text-gray-400 font-light">
-             Elige el nivel de acompañamiento que necesitas para llevar tu práctica al siguiente nivel.
+             Elige el nivel de profundidad que necesitas para llevar tu práctica al siguiente nivel.
           </p>
         </div>
         
         <div className="mt-16 grid md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
           {itemsToRender.map((program, index) => {
+            // Buscamos si el programa tiene el "label" para identificar cuál es el principal (Diplomado)
             const isFlagship = program.label !== undefined;
             return (
               <div 
@@ -104,7 +104,7 @@ export function ProgramsSection() {
                 </ul>
                 
                 {/* Botones de acción */}
-                <Link href={contact?.whatsappUrl || "https://wa.me/523113761284"} target="_blank" rel="noopener noreferrer" className="w-full mt-auto">
+                <Link href={contact?.whatsappUrl || "https://wa.me/525520894849"} target="_blank" rel="noopener noreferrer" className="w-full mt-auto">
                   <Button 
                     size="lg"
                     className={`w-full font-bold transition-all ${
@@ -113,7 +113,7 @@ export function ProgramsSection() {
                         : "bg-transparent hover:bg-[#2A3B47]/30 !text-[#F9F9F9] border border-[#2A3B47] hover:border-[#B58D53]/50"
                     }`}
                   >
-                    {isFlagship ? "Aplicar al Diplomado" : "Solicitar Mentoría"}
+                    {isFlagship ? "Aplicar al Diplomado" : "Inscribirme al Curso"}
                   </Button>
                 </Link>
               </div>

@@ -69,7 +69,7 @@ export const siteConfig = {
   },
 
   // EL PROCESO (El Circuito Digital)
-  process: {
+process: {
     title: "Tu ruta hacia la transformación",
     steps: [
       {
@@ -84,22 +84,17 @@ export const siteConfig = {
       },
       {
         step: "03",
-        name: "Curaduría Tecnológica",
-        description: "Te guiamos en la compra de los equipos correctos. Inversión inteligente, sin desperdicio de capital."
+        name: "Guía de Compra Inteligente", // <-- Adiós "Curaduría Tecnológica"
+        description: "Te decimos exactamente qué escáner o impresora comprar según tu presupuesto. Evitas gastar dinero en equipos que no necesitas."
       },
       {
         step: "04",
         name: "Ejecución Clínica",
         description: "Llevamos lo aprendido al paciente real. Te acompañamos en el paso a paso dentro de tu propio entorno."
-      },
-      {
-        step: "05",
-        name: "Soporte de Éxito",
-        description: "Resolución de dudas en tiempo real y perfeccionamiento continuo con nuestra comunidad de expertos."
       }
+      // Paso 5 eliminado por completo
     ]
   },
-
   // PROGRAMAS (La Bóveda VIP)
   programs: {
     title: "Programas de Alta Especialidad",

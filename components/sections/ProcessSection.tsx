@@ -1,39 +1,38 @@
 import { Container } from "../ui/Container";
-// Si SectionTitle tiene estilos fijos, quizás debas ajustarlo o pasarle clases custom
 import { SectionTitle } from "../ui/SectionTitle"; 
 import { siteConfig } from "../../content/site.config";
 
 export function ProcessSection() {
   const { process } = siteConfig;
 
-  // Fallbacks estratégicos con la Metodología de Odontología Digital 360
+  // Fallbacks estratégicos actualizados (Claros, directos y de 4 pasos)
   const defaultSteps = [
     {
       step: "01",
       name: "Diagnóstico y Setup",
-      description: "Analizamos tu clínica actual. Entendemos qué equipos tienes, tu flujo de pacientes y diseñamos la ruta exacta de implementación tecnológica sin gastos innecesarios."
+      description: "Analizamos tu clínica actual. Entendemos qué equipos tienes, tu flujo de pacientes y diseñamos la ruta exacta de implementación."
     },
     {
       step: "02",
       name: "Capacitación Clínica Activa",
-      description: "Cero relleno teórico. Aprendes el flujo digital completo (escaneo, diseño e impresión) trabajando sobre casos reales para dominar el software y hardware."
+      description: "Cero relleno teórico. Aprendes el flujo digital completo trabajando sobre casos reales para dominar el software al 100%."
     },
     {
       step: "03",
-      name: "Integración Tecnológica",
-      description: "Te guiamos en la adquisición e instalación de los equipos e insumos correctos para tu nivel. Nada de comprar por comprar; inversión inteligente."
+      name: "Guía de Compra Inteligente",
+      description: "Te decimos exactamente qué escáner o impresora comprar según tu presupuesto. Evitas gastar dinero en equipos que no necesitas."
     },
     {
       step: "04",
-      name: "Acompañamiento Clínico",
-      description: "No te dejamos solo con las máquinas. Te acompañamos en tus primeros casos reales para asegurar que el flujo digital sea rentable desde el día uno."
+      name: "Acompañamiento en Clínica",
+      description: "No te dejamos solo con las máquinas. Te acompañamos en tus primeros casos reales para asegurar que el flujo digital sea un éxito."
     }
   ];
 
   const stepsToRender = process?.steps?.length ? process.steps : defaultSteps;
 
   return (
-    // Fondo claro (#F9F9F9) para mantener el zig-zag del embudo (Oscuro -> Claro -> Oscuro -> Claro)
+    // Fondo claro (#F9F9F9) para mantener el zig-zag del embudo
     <section id="como-funciona" className="py-24 md:py-32 bg-[#F9F9F9] relative overflow-hidden">
       
       {/* Fondo Creativo: Blueprint / Grid Tecnológico en Azul Carbono muy tenue */}
@@ -53,7 +52,7 @@ export function ProcessSection() {
              {process?.title || "Tu ruta hacia la transformación digital"}
            </h2>
            <p className="text-xl text-gray-600 font-light leading-relaxed">
-             Un método paso a paso diseñado para que implementes tecnología en tu clínica de forma predecible, segura y sin frustraciones.
+             Un método de 4 pasos diseñado para que implementes tecnología en tu clínica de forma predecible, segura y sin frustraciones.
            </p>
         </div>
         
