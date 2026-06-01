@@ -3,6 +3,30 @@ export const siteConfig = {
   slogan: "Tecnología, conocimiento y resultados reales.",
   description: "La plataforma líder en México diseñada para llevar al odontólogo de la teoría a la ejecución absoluta del flujo digital. No somos un curso, somos tu equipo de implementación clínica.",
   
+  // CONTROL DE CURSOS CAMPAÑA ACTIVA (Sistema MAPS 2.0)
+  activeCoursePromo: {
+    status: "active",
+    title: "Flujo Digital en tu Clínica",
+    label: "Nuevo curso presencial",
+    route: "/curso-flujo-digital",
+    ctaLabel: "Apartar mi lugar por WhatsApp",
+    whatsappMessage: "Hola, quiero información para apartar mi lugar en el curso Flujo Digital en tu Clínica del Dr. Alan Castillo.",
+    price: "$9,300 MXN",
+    deposit: "$2,000 MXN",
+    seats: "20 lugares"
+  },
+  
+  // HISTORIAL DE EVENTOS (Mapeo automático para marcar Nogales como finalizado)
+  previousCourses: [
+    {
+      id: "curso-nogales-2026",
+      status: "completed",
+      label: "SOLD OUT", // <-- Modificado para indicar cierre total de pauta
+      title: "Cirugía Guiada: De la Incertidumbre a la Precisión", // <-- Título real expandido para conservar el diseño premium
+      route: "/curso-nogales"
+    }
+  ],
+
   // DATOS DE CONTACTO ACTUALIZADOS
   contact: {
     whatsapp: "+52 55 2089 4849",
@@ -14,7 +38,7 @@ export const siteConfig = {
 
   // SEO & ESTRATEGIA DIGITAL
   seo: {
-    title: "Odontología Digital 360 | Implementación de Flujo Digital en México",
+    title: "Odontología Digital 360 | Implementation de Flujo Digital en México",
     description: "Deja de tomar cursos teóricos. Implementa escaneo intraoral, diseño CAD e impresión 3D con acompañamiento clínico real y retorno de inversión garantizado.",
     keywords: [
       "flujo digital odontología", 
@@ -69,7 +93,7 @@ export const siteConfig = {
   },
 
   // EL PROCESO (El Circuito Digital)
-process: {
+  process: {
     title: "Tu ruta hacia la transformación",
     steps: [
       {
@@ -84,7 +108,7 @@ process: {
       },
       {
         step: "03",
-        name: "Guía de Compra Inteligente", // <-- Adiós "Curaduría Tecnológica"
+        name: "Guía de Compra Inteligente",
         description: "Te decimos exactamente qué escáner o impresora comprar según tu presupuesto. Evitas gastar dinero en equipos que no necesitas."
       },
       {
@@ -92,9 +116,9 @@ process: {
         name: "Ejecución Clínica",
         description: "Llevamos lo aprendido al paciente real. Te acompañamos en el paso a paso dentro de tu propio entorno."
       }
-      // Paso 5 eliminado por completo
     ]
   },
+
   // PROGRAMAS (La Bóveda VIP)
   programs: {
     title: "Programas de Alta Especialidad",
@@ -150,7 +174,7 @@ process: {
       },
       {
         question: "¿Qué pasa si nunca he usado software CAD?",
-        answer: "El sistema está diseñado para llevarte de cero a experto en semanas. Nuestra curva de aprendizaje es 3 veces más rápida que un diplomado tradicional."
+        answer: "El sistema está diseñado para llevarte de cero a expert en semanas. Nuestra curva de aprendizaje es 3 veces más rápida que un diplomado tradicional."
       },
       {
         question: "¿El acompañamiento es en mi clínica?",

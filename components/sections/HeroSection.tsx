@@ -14,7 +14,7 @@ export function HeroSection() {
       {/* Imagen de fondo: Cubre todo */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-curso-digital.jpg"
+          src="/images/hero-curso-digital.webp"
           alt="Odontología Digital 360 - Implementación"
           fill
           // CAMBIO: object-center asegura que el centro de la acción esté siempre visible

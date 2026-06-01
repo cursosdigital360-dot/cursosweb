@@ -34,6 +34,10 @@ export function Navbar() {
     { label: "FAQ", href: "#faq" },
   ];
 
+  // Extraer dinámicamente la ruta y etiqueta del curso activo para evitar hardcodeos
+  const activeCourseRoute = siteConfig?.activeCoursePromo?.route || "/curso-flujo-digital";
+  const activeCourseLabel = `• Curso ${siteConfig?.activeCoursePromo?.title?.split(" ")[0] || "Tepic"}`;
+
   return (
     <>
       {/* NAVEGADOR PRINCIPAL (Fijo arriba) */}
@@ -69,12 +73,13 @@ export function Navbar() {
             
             <div className="w-px h-4 bg-gray-500"></div>
 
+            {/* Enlace dinámico modificado apuntando al curso activo de Tepic */}
             <Link
-               href="/curso-nogales"
-               className="text-[#B58D53] hover:text-[#9A7642] font-bold transition-colors uppercase tracking-wider text-xs flex items-center gap-1.5 group"
+               href={activeCourseRoute}
+               className="text-[#3CCBFF] hover:text-[#2D7FF9] font-bold transition-colors uppercase tracking-wider text-xs flex items-center gap-1.5 group"
             >
-              <span className="flex h-1.5 w-1.5 rounded-full bg-[#B58D53] group-hover:animate-ping"></span>
-              Curso Nogales
+              <span className="flex h-1.5 w-1.5 rounded-full bg-[#3CCBFF] group-hover:animate-ping"></span>
+              {activeCourseLabel}
             </Link>
           </div>
 
@@ -144,14 +149,15 @@ export function Navbar() {
             </Link>
           ))}
           
+          {/* Enlace dinámico modificado en Menú Móvil apuntando al curso activo */}
           <Link
-             href="/curso-nogales"
+             href={activeCourseRoute}
              onClick={() => setIsMobileMenuOpen(false)}
-             className="text-[#B58D53] font-bold flex items-center justify-between py-4 border-b border-white/5"
+             className="text-[#3CCBFF] font-bold flex items-center justify-between py-4 border-b border-white/5"
           >
             <span className="flex items-center gap-3 uppercase text-sm tracking-wider">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-[#B58D53]"></span>
-              Curso Nogales
+              <span className="flex h-1.5 w-1.5 rounded-full bg-[#3CCBFF]"></span>
+              {activeCourseLabel}
             </span>
           </Link>
         </div>
