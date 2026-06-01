@@ -107,12 +107,12 @@ export function PromoPopup() {
 
           {/* Detalles Técnicos (Dashboard Style) */}
           <div className="rounded-2xl bg-[#0B1E35]/60 border border-[#0B1E35] p-5 mb-8 space-y-3">
-            {[
-              { icon: "📅", text: fechaDisplay },
-              { icon: "📍", text: lugarDisplay },
-              { icon: "🏢", text: "Sede por confirmar (Tepic)" },
-              { icon: "💰", text: `${precioDisplay} · ${apartadoDisplay}` },
-            ].map((item, i) => (
+           {[
+    { icon: "📅", text: fechaDisplay },
+    { icon: "📍", text: lugarDisplay },
+    { icon: "🏢", text: "Sede: Café del Chef" }, // <-- Cambiado de "por confirmar" a la sede real
+    { icon: "💰", text: `${precioDisplay} · ${apartadoDisplay}` },
+  ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 text-sm">
                 <div className="w-8 h-8 rounded-lg bg-[#07111F] border border-[#0B1E35] flex items-center justify-center text-base">
                   {item.icon}

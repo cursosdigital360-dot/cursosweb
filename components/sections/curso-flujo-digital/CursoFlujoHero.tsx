@@ -6,9 +6,9 @@ export function CursoFlujoHero() {
   const { meta, info, ctas, assets } = cursoFlujoDigitalConfig;
 
   // Forzar visualización de dirección según requerimiento estricto de sede por confirmar
-  const ciudadDisplay = "Tepic, Nayarit";
-  const sedeDisplay = "Sede por confirmar";
-  const textoUbicacionInfo = "Curso presencial en Tepic, Nayarit. La sede exacta se compartirá con los participantes confirmados.";
+ const ciudadDisplay = "Tepic, Nayarit";
+  const sedeDisplay = "Café del Chef";
+  const textoUbicacionInfo = "Curso presencial en Tepic, Nayarit. Sede confirmada en las instalaciones del Café del Chef.";
 
   return (
     <section id="inicio" className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#07111F] py-16 lg:py-24 flex items-center">

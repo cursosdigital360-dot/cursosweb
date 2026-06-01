@@ -3,7 +3,7 @@ export const siteConfig = {
   slogan: "Tecnología, conocimiento y resultados reales.",
   description: "La plataforma líder en México diseñada para llevar al odontólogo de la teoría a la ejecución absoluta del flujo digital. No somos un curso, somos tu equipo de implementación clínica.",
   
-  // CONTROL DE CURSOS CAMPAÑA ACTIVA (Sistema MAPS 2.0)
+ // CONTROL DE CURSOS CAMPAÑA ACTIVA (Sistema MAPS 2.0)
   activeCoursePromo: {
     status: "active",
     title: "Flujo Digital en tu Clínica",
@@ -13,7 +13,9 @@ export const siteConfig = {
     whatsappMessage: "Hola, quiero información para apartar mi lugar en el curso Flujo Digital en tu Clínica del Dr. Alan Castillo.",
     price: "$9,300 MXN",
     deposit: "$2,000 MXN",
-    seats: "20 lugares"
+    seats: "20 lugares",
+    // ¡Actualizado con la sede oficial!
+    location: "Tepic, Nayarit — Café del Chef" 
   },
   
   // HISTORIAL DE EVENTOS (Mapeo automático para marcar Nogales como finalizado)

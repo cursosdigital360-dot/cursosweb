@@ -13,10 +13,10 @@ export function CursoFlujoFAQ() {
       question: "¿Necesito experiencia previa en Exocad?",
       answer: "No necesariamente. El curso está diseñado para ayudarte a entender el flujo de trabajo paso a paso, con práctica guiada."
     },
-    {
-      question: "¿El curso es presencial?",
-      answer: "Sí. Es un curso presencial intensivo en Tepic, Nayarit."
-    },
+   { 
+    question: "¿El curso es presencial?", 
+    answer: "Sí. Es un curso presencial intensivo en Tepic, Nayarit, con sede confirmada en el Café del Chef." 
+  },
     {
       question: "¿Cuántos lugares hay disponibles?",
       answer: "El cupo está limitado a 20 participantes para asegurar una práctica real 1 a 1."
