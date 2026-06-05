@@ -88,12 +88,12 @@ export function Footer() {
             <span className="text-red-500 mx-0.5 text-base hover:scale-110 transition-transform cursor-default">♥</span>
             <span>por</span>
             <a 
-              href="https://somoslazaro.marketing/" 
+              href="https://somoslazaro.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="font-semibold text-gray-300 hover:text-white transition-colors ml-0.5"
             >
-              somoslazaro.marketing
+              somoslazaro.com
             </a>
           </div>
         </div>

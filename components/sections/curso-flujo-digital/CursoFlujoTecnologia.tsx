@@ -5,23 +5,17 @@ import { Container } from "../../ui/Container";
 export function CursoFlujoTecnologia() {
   const { technology, assets } = cursoFlujoDigitalConfig;
 
-  // Fallbacks de contenido técnico seguro mapeados uno a uno con la fuente de verdad
   const title = technology?.title || "Trabajarás con tecnología real de odontología digital";
   const text = technology?.text || "Durante el curso utilizarás herramientas y equipos aplicados al flujo digital clínico.";
   const focus = technology?.focus || "No se trata solo de conocer el equipo. Se trata de entender cómo se conecta cada parte del proceso para llevar un caso desde la boca del paciente hasta un resultado impreso y terminado.";
   
-  const tools = technology?.tools || [
-    "Escáner intraoral Medit",
-    "Escáner intraoral SEED Scan",
-    "Impresoras dentales SprintRay",
-    "Software Exocad",
-    "Resinas biocompatibles",
+  const tools = [
     "Micromotor",
     "Pinceles",
     "Laptop gamer para práctica y procesamiento"
   ];
 
-  // Matriz de imágenes previstas asignadas a su correspondiente herramienta para el grid técnico
+  // Galería técnica modular
   const gallery = [
     { src: assets?.scannerMedit, alt: "Escáner intraoral Medit usado en flujo digital dental" },
     { src: assets?.scannerSeed, alt: "Escáner SEED Scan para flujo digital dental" },
@@ -51,7 +45,7 @@ export function CursoFlujoTecnologia() {
         {/* Layout de Contenido: Grid de Imágenes vs Lista de Herramientas */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-start">
           
-          {/* Lado Izquierdo: Galería Técnica Modular (6 Módulos Visuales) */}
+          {/* Lado Izquierdo: Galería Técnica Modular */}
           <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {gallery.map((img, idx) => (
               <div 
@@ -63,8 +57,10 @@ export function CursoFlujoTecnologia() {
                     src={img.src}
                     alt={img.alt}
                     fill
-                    sizes="(max-w-768px) 50vw, 25vw"
+                    sizes="(max-w-768px) 50vw, 33vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    // 🔥 Quitamos el warning cargando de forma inmediata los primeros bloques visuales del viewport
+                    priority={idx < 3}
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center p-4 bg-[#0B1E35]/20">
@@ -78,32 +74,57 @@ export function CursoFlujoTecnologia() {
             ))}
           </div>
 
-          {/* Lado Derecho: Listado Detallado y Enfoque Práctico */}
-          <div className="lg:col-span-5 rounded-2xl border border-[#0B1E35] bg-[#0B1E35]/20 p-6 sm:p-8 backdrop-blur-md">
-            <span className="text-xs font-black tracking-wider text-[#3CCBFF] uppercase block mb-4 border-b border-[#0B1E35] pb-2">
-              Inventario de Equipamiento
-            </span>
+          {/* Lado Derecho: Inventario y Alianza de Marca Minimalista */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
             
-            <ul className="space-y-3">
-              {tools.map((tool, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#3CCBFF]" />
-                  <span className="text-sm font-medium text-[#F5F7FA] tracking-wide">
-                    {tool}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Bloque Informativo de Enfoque Conectivo */}
-            <div className="mt-8 pt-6 border-t border-[#0B1E35] bg-[#07111F]/40 p-4 rounded-xl border-l-2 border-l-[#2D7FF9]">
-              <span className="text-[10px] font-bold tracking-wider text-[#2D7FF9] uppercase block mb-1">
-                Estrategia del Ecosistema
+            <div className="rounded-2xl border border-[#0B1E35] bg-[#0B1E35]/20 p-6 sm:p-8 backdrop-blur-md">
+              <span className="text-xs font-black tracking-wider text-[#3CCBFF] uppercase block mb-4 border-b border-[#0B1E35] pb-2">
+                Inventario de Equipamiento
               </span>
-              <p className="text-xs font-medium leading-relaxed text-[#8A94A6]">
-                {focus}
-              </p>
+              
+              <ul className="space-y-3">
+                {tools.map((tool, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#3CCBFF]" />
+                    <span className="text-sm font-medium text-[#F5F7FA] tracking-wide">
+                      {tool}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 pt-6 border-t border-[#0B1E35] bg-[#07111F]/40 p-4 rounded-xl border-l-2 border-l-[#2D7FF9]">
+                <span className="text-[10px] font-bold tracking-wider text-[#2D7FF9] uppercase block mb-1">
+                  Estrategia del Ecosistema
+                </span>
+                <p className="text-xs font-medium leading-relaxed text-[#8A94A6]">
+                  {focus}
+                </p>
+              </div>
             </div>
+
+            {/* Bloque Minimalista del Patrocinador */}
+            <div className="rounded-xl border border-[#0B1E35]/60 bg-[#0B1E35]/10 p-4 flex items-center justify-between backdrop-blur-sm group/brand">
+              <div className="flex flex-col">
+                <span className="text-[9px] font-bold tracking-widest text-[#8A94A6] uppercase">
+                  Soporte Tecnológico por
+                </span>
+                <span className="text-xs font-medium text-[#F5F7FA] mt-0.5 opacity-80">
+                  Insumos clínicos oficiales
+                </span>
+              </div>
+              
+              <div className="relative h-7 w-28 opacity-45 grayscale contrast-125 group-hover/brand:opacity-100 group-hover/brand:grayscale-0 transition-all duration-500 ease-in-out">
+                <Image
+                  src="/images/curso-flujo-digital/logo-leafdental.png"
+                  alt="LeafDental Logo Oficial"
+                  fill
+                  sizes="112px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
           </div>
 
         </div>

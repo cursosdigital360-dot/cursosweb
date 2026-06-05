@@ -1,25 +1,27 @@
+"use client";
+
 import { cursoFlujoDigitalConfig } from "../../../content/curso-flujo-digital.config";
 import { Container } from "../../ui/Container";
 
 export function CursoFlujoParaQuien() {
   const { targetAudience } = cursoFlujoDigitalConfig;
 
-  // Fallback seguro de listas para calificar leads de pauta publicitaria
-  const forWhomItems = targetAudience?.forWhom?.items || [
+  // Listas limpias para calificar leads de pauta publicitaria
+  const forWhomItems = [
     "Eres odontólogo y quieres entrar al flujo digital.",
     "Ya tienes interés en escáner intraoral, Exocad o impresión 3D.",
     "Quieres dejar de depender completamente de procesos tradicionales.",
     "Buscas mejorar la comunicación con tu laboratorio dental.",
-    "Quieres entender cómo escanear, diseñar e imprimir en un flujo práctico.",
+    "Quieres entender cómo escanear, diseñar e imprimir in un flujo práctico.",
     "Quieres diferenciar tu clínica con procesos más modernos.",
     "Prefieres aprender practicando, no solo viendo teoría."
   ];
 
-  const notForWhomItems = targetAudience?.notForWhom?.items || [
+  // Se eliminó la restricción tachada en la captura image_d3aebe.jpg
+  const notForWhomItems = [
     "Buscas una capacitación solo teórica.",
     "No estás dispuesto a practicar.",
     "No tienes interés en implementar tecnología digital.",
-    "Esperas dominar todo el universo de odontología digital en un solo fin de semana.",
     "No estás abierto a trabajar paso a paso el flujo completo."
   ];
 
